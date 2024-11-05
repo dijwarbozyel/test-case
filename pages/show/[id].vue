@@ -1,6 +1,13 @@
 <template>
   <div class="min-h-screen bg-gray-100">
     <div class="max-w-[700px] mx-auto px-4 py-8">
+      <NuxtLink
+        to="/"
+        class="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 transition-colors"
+      >
+        <Icon name="uil:angle-left" class="w-5 h-5" />
+        <span class="ml-1">Back to Shows</span>
+      </NuxtLink>
       <div v-if="show" class="bg-white rounded-lg shadow-lg overflow-hidden">
         <div class="relative">
           <img
