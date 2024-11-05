@@ -26,13 +26,13 @@
       </div>
     </header>
     <main class="max-w-7xl mx-auto px-4 py-6">
-      <div class="flex space-x-4 mb-6">
+      <div class="flex space-x-4 mb-4 overflow-x-auto pb-2">
         <button
           v-for="category in categories"
           :key="category.id"
           @click="selectedCategory = category.id"
           :class="[
-            'flex items-center px-4 py-2 rounded-lg',
+            'flex items-center px-4 py-2 rounded-lg flex-shrink-0',
             selectedCategory === category.id
               ? 'bg-blue-500 text-white'
               : 'bg-white text-gray-600 hover:bg-gray-50',
