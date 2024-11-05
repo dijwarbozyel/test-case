@@ -33,10 +33,6 @@
         </div>
       </div>
 
-      <div v-else-if="status === 'pending'" class="flex justify-center py-12">
-        <Icon name="uil:spinner" class="animate-spin h-8 w-8" />
-      </div>
-
       <div v-else class="text-center text-red-500 py-12">Page not found</div>
     </div>
   </div>
