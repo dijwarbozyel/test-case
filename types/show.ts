@@ -20,7 +20,7 @@ export interface Show {
   webChannel: null;
   dvdCountry: null;
   externals: ShowExternals;
-  image: ShowImage;
+  image: ShowImage | null;
   summary: string;
   updated: number;
   _links: ShowLinks;
@@ -32,7 +32,7 @@ export interface ShowSchedule {
 }
 
 export interface ShowRating {
-  average: number;
+  average: number | null;
 }
 export interface ShowNetwork {
   id: number;
