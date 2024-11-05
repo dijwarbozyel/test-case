@@ -27,7 +27,7 @@
       </div>
 
       <div v-else-if="status === 'pending'" class="flex justify-center py-12">
-        <span class="loading">Loading...</span>
+        <Icon name="uil:spinner" class="animate-spin h-8 w-8" />
       </div>
 
       <div v-else class="text-center text-red-500 py-12">Page not found</div>
@@ -39,7 +39,8 @@
 import type { Show } from '~/types/show';
 
 const route = useRoute();
+const config = useRuntimeConfig()
 const { data: show, status } = await useFetch<Show>(
-  `https://api.tvmaze.com/shows/${route.params.id}`
+  `${config.public.apiBase}shows/${route.params.id}`
 );
 </script>
